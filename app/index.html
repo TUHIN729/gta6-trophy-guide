@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI trophies: saved progress, filters, a spoiler setting, a platinum roadmap and a guide to each trophy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5</p>
+      <h1>Leonida Legend</h1>
+      <p class="tagline">Every one of the 55 trophies, with a guide, a tracker and a road to the Platinum.</p>
+    </div>
+    <div class="platinum-card" id="platinumCard">
+      <span class="platinum-gem" aria-hidden="true">&#9670;</span>
+      <div>
+        <strong>Vice Got a Price!</strong>
+        <span id="platinumState">0 of 54 to go</span>
+      </div>
+    </div>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><span id="progressFill"></span></div>
+    <p class="progress-text" id="progressText">0 of 55 earned</p>
+    <p class="grade-counts" id="gradeCounts"></p>
+  </div>
+  <nav class="tabs" aria-label="Views">
+    <button type="button" id="tabChecklist" class="tab active" aria-current="page">Checklist</button>
+    <button type="button" id="tabRoadmap" class="tab">Platinum roadmap</button>
+    <button type="button" id="tabAbout" class="tab">About the list</button>
+  </nav>
+</header>
+
+<main>
+  <section id="viewChecklist" aria-label="Trophy checklist">
+    <div class="controls">
+      <label class="search">Search
+        <input id="search" type="search" placeholder="Trophy, mission or keyword&hellip;" autocomplete="off">
+      </label>
+      <label>Grade
+        <select id="grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label>Kind
+        <select id="kind">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="side">Side missions</option>
+          <option value="collectible">Collectibles</option>
+          <option value="activity">Activities</option>
+          <option value="misc">Miscellaneous</option>
+        </select>
+      </label>
+      <label>Show
+        <select id="earnedFilter">
+          <option value="all">Earned &amp; unearned</option>
+          <option value="unearned">Unearned only</option>
+          <option value="earned">Earned only</option>
+        </select>
+      </label>
+      <label class="check"><input id="missableOnly" type="checkbox"> Missable only</label>
+      <label class="check" title="Hides story trophies you have not earned yet"><input id="spoilerFree" type="checkbox"> Spoiler-free mode</label>
+      <div class="actions">
+        <button id="exportBtn" type="button">Export progress</button>
+        <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+        <button id="resetBtn" type="button" class="danger">Reset progress</button>
+      </div>
+    </div>
+    <p class="result-count" id="resultCount"></p>
+    <ul class="trophy-list" id="trophyList"></ul>
+    <p class="empty" id="emptyState" hidden>No trophies match these filters. Try clearing the search or a filter.</p>
+  </section>
+
+  <section id="viewRoadmap" aria-label="Platinum roadmap" hidden>
+    <h2>The road to the Platinum</h2>
+    <p class="roadmap-intro">About 200 hours, rated 4/10 by PowerPyx, in a single playthrough — there is no mission replay and no New Game+, but free roam stays open after the story. Keep a manual save at the start and end of each chapter: 15 save slots, and no way back otherwise.</p>
+    <ol class="roadmap">
+      <li>
+        <h3>Phase 1 &mdash; Play the story <span class="phase-time">60&ndash;80 hours</span></h3>
+        <p>Play all five chapters with Jason and Lucia and take optional missions as they appear. Story trophies pop as you go and cannot be missed. Scan vehicles with the WAiNK app and study animals through your binoculars from the start — the 100% checklist will want 200 of 277 vehicles and 100 of 255 animals later.</p>
+        <p class="phase-warning"><strong>Do not skip the balcony meditation.</strong> In Chapter 1, after the mission Down to Earth, Lucia mentions meditating at Jason&rsquo;s house in the morning. Follow her to the balcony and accept — that spot is gone after Chapter 1, and Positive Mental Attitude may need it.</p>
+        <p>Tick off as you go: <span class="phase-trophies" data-phase="1"></span></p>
+      </li>
+      <li>
+        <h3>Phase 2 &mdash; 100% completion <span class="phase-time">about 100 hours</span></h3>
+        <p>After the credits, open Progress &gt; Stats &gt; 100% Completion and work the checklist: 100 optional tasks, all 39 gang operations, 22 bank jobs, 7 payday loan jobs, all 8 bank vaults, 15 of 18 card sets, 100 WAiNK scans, 33 underwater discoveries, 100 of 125 Cocaine Flamingos, 200 vehicles, 50 weapons, 100 animals, all 42 shooting-range golds, all 42 drone time trials, 300 of 397 stunts and 70 of 80 challenges. The checklist is roughly 60% of true completion — do not chase everything.</p>
+        <p>Tick off as you go: <span class="phase-trophies" data-phase="2"></span></p>
+      </li>
+      <li>
+        <h3>Phase 3 &mdash; Strangers, side strands &amp; cleanup <span class="phase-time">10&ndash;20 hours</span></h3>
+        <p>Finish the eight qualifying Strangers &amp; Freaks strands, the final missions for Andy, Kenton, Billy, Randy and Tyrone, the remaining meditation spots, and any combat, driving or robbery trophies still open. Then check the list here: when the last one ticks, the Platinum pops.</p>
+        <p>Tick off as you go: <span class="phase-trophies" data-phase="3"></span></p>
+      </li>
+    </ol>
+    <aside class="roadmap-note">
+      <h3>Know before you start</h3>
+      <ul>
+        <li>Cheats disable trophies and saving while active — keep trophy runs cheat-free and save before you cheat.</li>
+        <li>Only one trophy is possibly missable: Positive Mental Attitude. Everything else, story included, can be earned after the credits.</li>
+        <li>No online trophies, no difficulty settings, no DLC trophies. The whole list lives in Leonida.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section id="viewAbout" aria-label="About the list" hidden>
+    <h2>About this list</h2>
+    <p>Grand Theft Auto VI has 55 trophies on PlayStation 5: 1 Platinum, 2 Gold, 6 Silver and 46 Bronze. The same 55 exist as achievements on Xbox Series X|S, worth 1,000 Gamerscore. All 55 are single-player and offline.</p>
+    <p>Rockstar has not published an official trophy list. The names, descriptions and grades in this guide are the ones reported on 18 November 2026 by the guide sites below, working from the game, and they agree with each other. Where those guides have not yet confirmed how a trophy unlocks, this guide says so in the trophy&rsquo;s own entry instead of guessing — five trophies are unconfirmed that way, and one more has an unconfirmed detail.</p>
+    <h3>Sources</h3>
+    <ul class="source-list" id="sourceList"></ul>
+    <p class="fineprint">This is an unofficial fan guide. Grand Theft Auto and GTA are trademarks of Rockstar Games. No official artwork or logos are used here; the design is original.</p>
+  </section>
+</main>
+
+<div class="detail-overlay" id="detailOverlay" hidden>
+  <article class="detail" role="dialog" aria-modal="true" aria-labelledby="detailName" id="detailCard">
+    <button type="button" class="detail-close" id="detailClose" aria-label="Close details">&times;</button>
+    <p class="detail-grade" id="detailGrade"></p>
+    <h2 id="detailName"></h2>
+    <p class="detail-desc" id="detailDesc"></p>
+    <div class="detail-flags" id="detailFlags"></div>
+    <h3>How to unlock it</h3>
+    <p id="detailGuide"></p>
+    <h3>Sources</h3>
+    <ul class="source-list" id="detailSources"></ul>
+    <label class="check detail-earned"><input id="detailEarned" type="checkbox"> Earned</label>
+  </article>
+</div>
+
+<footer>
+  <p>Progress is saved in this browser only. Export it before clearing your browser data. Works fully offline — no network requests, no accounts.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
